@@ -42,10 +42,8 @@ class PidCal:
         print(self.p)
 
     # setpoint is the center and the x_current is where the car is
-    # width = 640, so 320 is the center but 314 is more accurate in real
-    def pid_control(self, x_current, setpoint=314):
-        print "HHHHHHHHHHHHHHH"
-        print x_current
+    # width = 640, so 320 is the center but 316 is more accurate in real
+    def pid_control(self, x_current, setpoint=316):
         self.x = int(x_current)
         self.twiddle()
 
@@ -56,8 +54,5 @@ class PidCal:
         d1 = round(self.p[2] * (error -  self.error_old), 9)
         self.error_old = error
         pid = p1 + i1 + d1
-        #print("p : " ,p)
-        #print("i : " ,i)
-        #print("d : " ,d)
         return pid
 
