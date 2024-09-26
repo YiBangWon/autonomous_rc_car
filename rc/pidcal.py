@@ -42,8 +42,8 @@ class PidCal:
         print(self.p)
 
     # setpoint is the center and the x_current is where the car is
-    # width = 640, so 320 is the center but 318 is more accurate in real
-    def pid_control(self, x_current, setpoint=318):
+    # width = 640, so 320 is the center but 314 is more accurate in real
+    def pid_control(self, x_current, setpoint=314):
         print "HHHHHHHHHHHHHHH"
         print x_current
         self.x = int(x_current)
